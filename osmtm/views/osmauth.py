@@ -20,18 +20,18 @@ import urlparse
 import oauth2 as oauth
 
 # our oauth key and secret (we're the consumer in the oauth protocol)
-# consumer key and secret created by Kate Chapman
-CONSUMER_KEY = 'BOFkVgLDXTSMP6VHfiX8MQ'
-CONSUMER_SECRET = '4o4uLSqLWMciG2fE2zGncLcdewPNi9wU1To51Iz2E'
+# consumer key and secret created by Albin Larsson for OHM
+CONSUMER_KEY = 'A08KEfQjvNd8WT4jUJfQsIXwCfgCLnUWGMLXAidk'
+CONSUMER_SECRET = '82sm6mDHd2SUPcGR2Is2VULfRrWtkJ8LP8Kq4yWc'
 
 # OSM oauth URLs
-BASE_URL = 'https://www.openstreetmap.org/oauth'
+BASE_URL = 'http://www.openhistoricalmap.org/oauth'
 REQUEST_TOKEN_URL = '%s/request_token' % BASE_URL
 ACCESS_TOKEN_URL = '%s/access_token' % BASE_URL
 AUTHORIZE_URL = '%s/authorize' % BASE_URL
 
 # OSM user details URL
-USER_DETAILS_URL = 'http://api.openstreetmap.org/api/0.6/user/details'
+USER_DETAILS_URL = 'http://www.openhistoricalmap.org/api/0.6/user/details'
 
 # an oauth consumer instance using our key and secret
 consumer = oauth.Consumer(CONSUMER_KEY, CONSUMER_SECRET)
@@ -45,7 +45,7 @@ def login(request):  # pragma: no cover
     url = "%s?oauth_callback=%s" % (REQUEST_TOKEN_URL, oauth_callback_url)
     resp, content = client.request(url, "GET")
     if resp['status'] != '200':
-        return HTTPBadGateway('The OSM authentication server didn\'t\
+        return HTTPBadGateway('The OHM authentication server didn\'t\
                 respond correctly')
     request_token = dict(urlparse.parse_qsl(content))
     # store the request token in the session, we'll need in the callback
