@@ -63,10 +63,10 @@ if (typeof countdownInterval != 'undefined') {
     <hr>
     <div><%include file="task.history.mako" /></div>
     <hr>
-    <p><a href="http://www.openstreetmap.org/history?bbox=${bounds[0]},${bounds[1]},${bounds[2]},${bounds[3]}"
+    <p><a href="http://www.openhistoricalmap.org/history?bbox=${bounds[0]},${bounds[1]},${bounds[2]},${bounds[3]}"
           rel="tooltip"
-          data-original-title="${_('See the changesets in the OSM database for this area.')}"
-          target="_blank">${_('OSM changesets')}</a> | ${overpassturbo_link(history,task,bounds)}</p>
+          data-original-title="${_('See the changesets in the OHM database for this area.')}"
+          target="_blank">${_('OHM changesets')}</a> | ${overpassturbo_link(history,task,bounds)}</p>
 % endif
   </div>
 </div>

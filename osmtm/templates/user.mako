@@ -25,8 +25,8 @@ else:
       </p>
       % endif
       <p>
-        <a href="http://www.openstreetmap.org/user/${contributor.username}" title="${_('OSM User Profile')}">
-          <img src="http://www.openstreetmap.org/favicon.ico" alt="[OSM]" />${_('OSM Profile')}</a>
+        <a href="http://www.openhistoricalmap.org/user/${contributor.username}" title="${_('OSM User Profile')}">
+          <img src="http://www.openhistoricalmap.org/favicon.ico" alt="[OSM]" />${_('OSM Profile')}</a>
       </p>
     </div>
     <div class="col-md-6">

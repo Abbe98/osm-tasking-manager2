@@ -29,7 +29,7 @@
   var droppedFileWasUnreadable = "${_('Dropped file was unreadable')}";
   var pleaseProvideGeojsonOrKmlFile = "${_('Please provide a .geojson or a .kml file')}";
 <%
-    link = '<a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    link = '<a href="http://www.openhistoricalmap.org/copyright">OpenHistoricalMap</a>'
     text = _(u'Map data © ${osm_link} contributors', mapping={'osm_link': link})
 %>
   var osmAttribI18n = '${text|n}';

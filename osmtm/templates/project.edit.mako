@@ -321,7 +321,7 @@ geometry = loads(str(project.area.geometry.data))
         <span class="glyphicon glyphicon-lock"></span> ${_('Private')}
       </label>
       <div class="help-block">
-        ${_("Private means that only a given list of users can access this project. In order for the user's name to be available to add to the Allowed Users - they first must visit the URL for your instance of OSMTM and Authorize access to their OpenStreetMap account. After they've done this, their username should be available for the administrator to add.")}
+        ${_("Private means that only a given list of users can access this project. In order for the user's name to be available to add to the Allowed Users - they first must visit the URL for your instance of OSMTM and Authorize access to their OpenHistoricalMap account. After they've done this, their username should be available for the administrator to add.")}
       </div>
     </div>
   </div>

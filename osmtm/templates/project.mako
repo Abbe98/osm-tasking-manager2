@@ -109,7 +109,7 @@ var josmRcDidNotRespondI18n = "${_('JOSM remote control did not respond. Do you 
 var somethingWrongHappenedI18n = "${_('Something wrong happened')}";
 var pleaseLoginFirstI18n = "${_('Please login first')}";
 <%
-  link = '<a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  link = '<a href="http://www.openhistoricalmap.org/copyright">OpenHistoricalMap</a>'
   text = _(u'Map data © ${osm_link} contributors', mapping={'osm_link': link})
 %>
 var osmAttribI18n = '${text|n}';

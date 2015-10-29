@@ -60,7 +60,7 @@ comments = []
           <%include file="user_menu.mako" />
           % else:
           <li>
-          <a href="${login_url}" class="btn btn-link pull-right">${_('login to OpenStreetMap')}</a>
+          <a href="${login_url}" class="btn btn-link pull-right">${_('login to OpenHistoricalMap')}</a>
           </li>
           % endif
         </ul>
