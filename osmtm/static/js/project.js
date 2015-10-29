@@ -99,8 +99,8 @@ osmtm.project = (function() {
     lmap = L.map('leaflet');
     L.control.scale().addTo(lmap);
     // create the tile layer with correct attribution
-    var osmUrl='http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png';
-    var osmAttrib=osmAttribI18n;
+    var osmUrl='http://www.openhistoricalmap.org/ohm_tiles/{z}/{x}/{y}.png';
+    var osmAttrib='Map data © OpenHistoricalMap contributors';
     var osm = new L.TileLayer(osmUrl, {attribution: osmAttrib});
     lmap.addLayer(osm);
 

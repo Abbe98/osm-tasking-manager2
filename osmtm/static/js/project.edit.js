@@ -101,8 +101,8 @@ osmtm.project.edit.priority_areas = (function() {
     }
     lmap = L.map('leaflet_priority_areas');
     // create the tile layer with correct attribution
-    var osmUrl='http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png';
-    var osmAttrib='Map data © OpenStreetMap contributors';
+    var osmUrl='http://www.openhistoricalmap.org/ohm_tiles/{z}/{x}/{y}.png';
+    var osmAttrib='Map data © OpenHistoricalMap contributors';
     var osm = new L.TileLayer(osmUrl, {attribution: osmAttrib});
     lmap.addLayer(osm);
 
