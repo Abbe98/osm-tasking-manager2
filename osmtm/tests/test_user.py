@@ -12,7 +12,7 @@ class TestViewsFunctional(BaseTestCase):
         headers = self.login_as_user1()
         res = self.testapp.get('/users', headers=headers)
         # user should appear as authenticated
-        self.assertFalse('login to OpenStreetMap' in res.body)
+        self.assertFalse('login to OpenHistoricalMap' in res.body)
 
     def test_users_json(self):
         res = self.testapp.get('/users.json', status=200)
@@ -49,7 +49,7 @@ class TestViewsFunctional(BaseTestCase):
 
         httpretty.register_uri(
             httpretty.GET,
-            "http://www.openstreetmap.org/api/0.6/user/%s" % userid,
+            "http://www.openhistorical.org/api/0.6/user/%s" % userid,
             body='<?xml version="1.0" encoding="UTF-8"?>' +
                  '<osm> <user display_name="%s"></user></osm>' % username,
             content_type='application/xml; charset=utf-8')
@@ -86,7 +86,7 @@ class TestViewsFunctional(BaseTestCase):
 
         httpretty.register_uri(
             httpretty.GET,
-            "http://www.openstreetmap.org/api/0.6/user/%s" % userid,
+            "http://www.openhistoricalmap.org/api/0.6/user/%s" % userid,
             body='<?xml version="1.0" encoding="UTF-8"?>' +
                  '<osm> <user display_name="%s"></user></osm>' % username,
             content_type='application/xml; charset=utf-8')
@@ -109,7 +109,7 @@ class TestViewsFunctional(BaseTestCase):
 
         httpretty.register_uri(
             httpretty.GET,
-            "http://www.openstreetmap.org/api/0.6/user/%s" % USER1_ID,
+            "http://www.openhistoricalmap.org/api/0.6/user/%s" % USER1_ID,
             body='<?xml version="1.0" encoding="UTF-8"?>' +
                  '<osm> <user display_name="%s"></user></osm>' % username,
             content_type='application/xml; charset=utf-8')
@@ -137,7 +137,7 @@ class TestViewsFunctional(BaseTestCase):
         new_username = username + '_changed'
         httpretty.register_uri(
             httpretty.GET,
-            "http://www.openstreetmap.org/api/0.6/user/%s" % userid,
+            "http://www.openhistoricalmap.org/api/0.6/user/%s" % userid,
             body='<?xml version="1.0" encoding="UTF-8"?>' +
                  '<osm> <user display_name="%s"></user></osm>' % new_username,
             content_type='application/xml; charset=utf-8')
@@ -158,7 +158,7 @@ class TestViewsFunctional(BaseTestCase):
 
         httpretty.register_uri(
             httpretty.GET,
-            "http://www.openstreetmap.org/api/0.6/user/%s" % USER1_ID,
+            "http://www.openhistoricalmap.org/api/0.6/user/%s" % USER1_ID,
             status=500)
 
         self.testapp.get('/user/%s' % username, status=200)
@@ -178,7 +178,7 @@ class TestViewsFunctional(BaseTestCase):
 
         httpretty.register_uri(
             httpretty.GET,
-            "http://www.openstreetmap.org/api/0.6/user/%s" % userid,
+            "http://www.openhistoricalmap.org/api/0.6/user/%s" % userid,
             body='<?xml version="1.0" encoding="UTF-8"?>' +
                  '<osm> <user display_name="%s"></user></osm>' % username,
             content_type='application/xml; charset=utf-8')
